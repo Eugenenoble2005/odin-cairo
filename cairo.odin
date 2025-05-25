@@ -2061,5 +2061,7 @@ foreign lib {
 
 	/* Functions to be used while debugging (not intended for use in production code) */
 	debug_reset_static_data :: proc() ---
-}
 
+	image_surface_create_from_png :: proc(filename: cstring) -> ^Surface ---
+	image_surface_create_from_png_stream :: proc(read_func : Read_Func , closure: rawptr) -> ^Surface ---
+}
